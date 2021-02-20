@@ -2,12 +2,12 @@ package com.company.lesson04;
 
 public class Stud extends Person
 {
+    private final static String TYPE_FFF = "ddd";
     private String group;
     private String university;
 
     Stud (String name, String surname, int age, String group, String university) {
         super(name, surname, age);
-
         this.group = group;
         this.university = university;
     }

@@ -39,7 +39,7 @@ public class ElectroCar extends Car
     @Override
     public void start() {
         if (batteryCapacity > 0) {
-            super.start();
+            System.out.println();
         } else {
             System.out.println("Please charge battery");
         }

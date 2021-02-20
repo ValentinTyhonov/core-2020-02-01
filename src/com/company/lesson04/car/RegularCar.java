@@ -35,7 +35,7 @@ public class RegularCar extends Car
     @Override
     public void start() {
         if (fuelCapacity > 0) {
-            super.start();
+            System.out.println();
         } else {
             System.out.println("No more fuel");
         }

@@ -1,6 +1,6 @@
 package com.company.lesson04.car;
 
-public class Car
+public abstract class Car
 {
     private String model;
     private String year;
@@ -54,9 +54,7 @@ public class Car
         this.passangers = passangers;
     }
 
-    public void start() {
-        System.out.println("Car is starting");
-    }
+    public abstract void start();
 
     public void stop() {
         System.out.println("Car is stopping");
