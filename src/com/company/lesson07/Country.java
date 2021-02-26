@@ -1,10 +1,12 @@
 package com.company.lesson07;
 
+import java.io.IOException;
+
 public enum Country
 {
     UKRAINE("Ukraine", "UAH", 48838483, City.KYIV),
     USA("United States of America", "USD", 3245123, City.LVIV),
-    FRANCE("France", "EUR", 6534623, City.PARIS);
+    FRANCE("France", "", 6534623, City.PARIS);
 
     private String name;
     private String currency;
@@ -34,7 +36,18 @@ public enum Country
         return population;
     }
 
-    public boolean isUsd() {
+    /**
+     *
+     * @return
+     * @throws IOException
+     */
+    public boolean isUsd() throws IOException
+    {
+
+        if (currency.isEmpty()) {
+            throw new IOException("fd");
+        }
+
         return this.getCurrency().equals("USD");
     }
 }

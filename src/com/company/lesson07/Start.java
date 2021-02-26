@@ -1,8 +1,10 @@
 package com.company.lesson07;
 
+import java.io.IOException;
+
 public class Start
 {
-    public static void main(String[] args)
+    public static void main(String[] args) throws Exception
     {
         TrafficSignal[] signals = TrafficSignal.values();
 
@@ -17,9 +19,23 @@ public class Start
         }
 
         for (Country country : Country.values()) {
-            if (country.isUsd()) {
-                System.out.println(country.getName());
+            try
+            {
+                if (country.isUsd()) {
+                    System.out.println(country.getName());
+                }
             }
+            catch (IOException | NullPointerException e)
+            {
+                System.out.println(e.getMessage());
+            } catch (Exception e) {
+                System.out.println("Some unexxpected exception: " + e.getMessage());
+            } finally
+            {
+                System.out.println("finally is here");
+            }
+
+            System.out.println("Proceed");
         }
 
 
