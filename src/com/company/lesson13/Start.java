@@ -30,12 +30,12 @@ public class Start
             System.out.println(elem + "  " + elem.hashCode());
         }
 
-        Set<Person> people = new TreeSet<>(new PersonAgeComparator());
+        Set<Person> people = new TreeSet<>();
         Person p = new Person("Marl", "Ooo", 33);
         people.add(p);
         people.add(new Person("Ken", "Hoh", 16));
         people.add(new Person("Marl", "J", 18));
-        people.add(new Person("Danny", "Foo", 44));
+        people.add(new Person("Danny", "Foo", 16));
         people.add(p);
 
         for (Person elem : people) {
